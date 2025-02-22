@@ -1,31 +1,31 @@
 # ProjInda
 --- 
-Projekt för ProjInda24
-### Projekt Beskrivning
+Project for ProjInda24
+### Project Description
 ---
-Det här projektet handlar om att skapa en trafiksimulering för en korsning. Här finns det vägar från 4 olika håll med en fil i varje riktning där bilar kan komma och åka till varje fil. Man ska kunna kontrollera variabler kring hur många bilar som kommer från vilket håll och analysera hur trafiken påverkas. Dessutom implementerade vi olika algoritmer för hur trafikljusen kopplade till korsningen skulle fungera så att vi kunde se hur deras logik kunde påverka trafiken under olika förhållanden.
+This project is about creating a traffic simulation for an intersection. Here there are roads from 4 different directions with one lane in each direction where cars can come and go to each lane. You should be able to control variables about how many cars come from which direction and analyze how the traffic is affected. In addition, we implemented different algorithms for how the traffic lights connected to the intersection would work so that we could see how their logic could affect traffic under different conditions.
 
-Det här projektet visar simulationen grafiskt med hjälp av Java Swing. Detta hjälper med att rita ut bilar och skapa element man kan interagera med. För att köra projektet behöver man alltså se till att Java Swing fungerar på sitt system. Detta kan man göra genom att följa denna guide, Option 1 (https://phoenixnap.com/kb/install-java-ubuntu), då kan man köra projektet från terminalen i ubuntu. Det år annars även bra att köra projektet via vscode om man har de nödvändiga Java Extensions.
+This project shows the simulation graphically using Java Swing. This helps with drawing cars and creating elements that you can interact with. To run the project, you need to make sure that Java Swing is working on your system. You can do this by following this guide, Option 1 (https://phoenixnap.com/kb/install-java-ubuntu), then you can run the project from the terminal in ubuntu. Option 2, run the project via vscode with the necessary Java Extensions downloaded.
 
-För att få simuleringen att kunna köra medans man vill ändra på saker har vi använt oss av Java Runnable. Denna import tillåter oss att kunna utföra olika funktioner parallellt med varandra. Alltså har det hjälpt med att se till att man kan köra simuleringen och ändra på variabler samtidigt.
+To make the simulation run while you want to change things, we have used Java Runnable. This import allows us to execute different functions in parallel with each other. So it has helped to ensure that you can run the simulation and change variables at the same time.
 
-### Trafiklogik
-Vid kontrollpanelen finns radioknappar för vilken typ av logik som trafikljusen ska använda sig av. Här finns det tre alternativ och det sätts automatiskt till den första.
-1. Den första logiken är ett slumpmässigt val av vilket trafikljus som ska visa grönt en gång i taget. Detta är väldigt ineffektivt och kan leda till att många bilar får vänta länge.
-2. Den andra logiken handlar om att ha igång två trafikljus på motsatt håll igång samtidigt. Sedan alterneras det vilka två trafikljus som ska vara igång hela tiden. Detta fungerar mycket mer effektivt men kan vara sämre ifall all trafik kommer från ett håll då köer kan bildas.
-3. Den tredje logiken bygger på storleken på köerna i varje håll, därifrån sätts de två trafikljus med motsatta håll med fläst bilar vid säg igång. Detta ser till att stora köer alldrig bildas, men kan få enstaka bilar i en fil att vänta oädnligt. 
+### Trafic logic
+At the control panel there are radio buttons for which type of logic the traffic lights should use. There are three options here and it is automatically set to the first one.
+1. The first logic is a random choice of which traffic light will show green once at a time. This is very inefficient and can lead to many cars having to wait for a long time.
+2. The second logic involves having two traffic lights in opposite directions on at the same time. Then it is alternated which two traffic lights should be on all the time. This works much more efficiently but can be worse if all traffic comes from one direction as queues can form.
+3. The third logic is based on the size of the queues in each direction, from there the two traffic lights with opposite directions are set to start with cars at the same time. This ensures that large queues never form, but can cause individual cars in a lane to wait indefinitely.
 
-### Trafik situationer
-Trafiksituationer finns för att demonstrera i vilka sammanhang som logikerna kan fungera bra. Ifall ingen logik är igångsatt så skickas bilar in slumpmässigt från olika håll. 
-1. Första situationen är direkt kopplad till logik 2 då den visar en situation där logik 1 hade haft stora problem. Här skickas bilar in från alla håll jämt.
-2. Andra situationen är mer kopplad till att visa en situation där logik 3 krävs istället för logik 2. Här kommer bilar främst ifrån öst och väst, detta leder till att man i princip endast vill att det ska vara grönt vid öst och väst och inte för norr och syd eftersom köer skapas annars.
+### Trafic situations
+Traffic situations are provided to demonstrate in which contexts the logic can work well. If no logic is activated, cars are sent in randomly from different directions.
+1. The first situation is directly linked to logic 2 as it shows a situation where logic 1 had had major problems. Here cars are sent in from all directions at the same time.
+2. The second situation is more connected to showing a situation where logic 3 is required instead of logic 2. Here cars mainly come from the east and west, this leads to the fact that in principle you only want it to be green at the east and west and not for the north and south because queues are created otherwise.
 
-### Arbetarna
+### Creators
 ---
-Detta projekt skapades av:      <br>
+This project was created by:      <br>
 Adam Carlström                  <br>
 Arvid Willhemlsson              <br>
 
-### Hur arbetet är uppdelat
+### How the work has been divided
 ---
-För att göra arbetet mer effektivt har arbetet delats upp mellan oss. Här har Adam främst arbetat med de grafiska komponenterna för att se till att själva trafiksituationen visas på rätt sätt. Arvid har arbetat främst med trafiklogiken och hur trafikljusen ska fungera samt i vilka fall som bilar tillåts att få köra.
+To make the work more efficient, the work has been divided between us. Here, Adam has mainly worked with the graphic components to ensure that the traffic situation itself is displayed correctly. Arvid has mainly worked with the traffic logic and how the traffic lights should work and in which cases cars are allowed to drive.
